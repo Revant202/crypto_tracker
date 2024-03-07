@@ -8,7 +8,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="flex items-center justify-between flex-wrap  px-12 py-6 bg-white">
+    <nav className="flex items-center justify-between flex-wrap  px-10 py-4 bg-white">
       <div className="flex items-center flex-shrink-0 text-white mr-6">
         <img src="/logo.svg" alt="Koinx Logo" />
       </div>

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
-import { AdvancedRealTimeChart } from "react-ts-tradingview-widgets";
 import Navbar from "./components/Navbar";
 import { fetchBitcoinPrice, fetchTrendingCryptos } from "./api";
 import GetStartedCard from "./components/GetStartedCard";
@@ -10,11 +9,13 @@ import Tokenomics from "./components/Tokenomics";
 import Team from "./components/Team";
 import About from "./components/About";
 import RecommendedCoins from "./components/RecommendedCoins";
+import Performance from "./components/Performance";
+import Chart from "./components/Chart";
 
 function App() {
   const [bitcoinData, setBitcoinData] = useState(null);
   const [trendingCryptos, setTrendingCryptos] = useState(null);
-
+  console.log(bitcoinData);
   useEffect(() => {
     const fetchData = async () => {
       const bitcoinPriceData = await fetchBitcoinPrice();
@@ -29,35 +30,21 @@ function App() {
   return (
     <div className="flex h-full flex-col bg-[#EFF2F5]">
       <Navbar />
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4 mx-10 bg-[#EFF2F5]">
-        <div className="col-span-2">
-          <div className="h-[calc(100vh-200px)]  rounded-[8px] bg-white overflow-hidden">
-            <AdvancedRealTimeChart
-              theme="light"
-              autosize={true}
-              symbol="AAPL"
-              timezone="Etc/UTC"
-              style="2"
-              locale="in"
-              enable_publishing={false}
-              hide_top_toolbar={true}
-              withdateranges={true}
-              range="ALL"
-              // save_image={false}
-              calendar={false}
-              hide_volume={true}
-              hide_side_toolbar={true}
-              allow_symbol_change={false}
-              hide_legend={true}
-            />
-          </div>
+      <div className="flex gap-2 mx-16 mt-5 items-center">
+        <p className="text-[14px] text-[#546A77]">Cryptocurrencies</p>
+        <img src="/double_arrow.svg" alt="" />
+        <p className="text-[14px] font-semibold text-black">Bitcoin</p>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-3 md:gap-8  p-4 mx-auto max-w-[1500px] bg-[#EFF2F5]">
+        <div className="md:col-span-2">
+          <Chart data={bitcoinData} />
+          <Performance />
           <Sentiments />
           <About />
           <Tokenomics />
           <Team />
-          <RecommendedCoins data={trendingCryptos} />
         </div>
-        <div className="col-span-1">
+        <div className="md:col-span-1">
           <GetStartedCard />
           {/* <h2>Bitcoin Price:</h2>
             {bitcoinData && (
@@ -65,11 +52,12 @@ function App() {
                 <p>INR: {bitcoinData.bitcoin.inr}</p>
                 <p>USD: {bitcoinData.bitcoin.usd}</p>
                 <p>24hr Change: {bitcoinData.bitcoin.inr_24h_change}%</p>
-              </div>
+                </div>
             )} */}
           <TrendingCoinsCard data={trendingCryptos} />
         </div>
       </div>
+      <RecommendedCoins data={trendingCryptos} />
     </div>
   );
 }

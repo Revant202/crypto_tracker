@@ -2,7 +2,7 @@ import React from "react";
 
 export default function GetStartedCard() {
   return (
-    <div className="flex flex-col text-center justify-center items-center gap-8 mx-5 px-12 py-8 rounded-[16px] bg-primary text-white ">
+    <div className="flex flex-col text-center justify-center items-center gap-8 px-12 py-8 rounded-[8px] md:mr-5 md:mt-0 mt-4 bg-primary text-white ">
       <p className="text-[#F2F2F2] font-bold text-[24px] mx-10">
         Get Started with KoinX for FREE
       </p>
@@ -18,4 +18,3 @@ export default function GetStartedCard() {
     </div>
   );
 }
-

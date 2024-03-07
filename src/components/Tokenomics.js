@@ -2,11 +2,11 @@ import React from "react";
 
 export default function Tokenomics() {
   return (
-    <div className="flex flex-col p-4 gap-5 rounded-[6px] bg-white">
-      <p>Sentiments</p>
-      <p>Sentiments</p>
+    <div className="flex flex-col p-4 gap-5 rounded-[8px] mt-6 bg-white ">
+      <p className="text-[24px] font-semibold">Tokenomics</p>
+      <p className="text-[20px] font-semibold">Initial Distribution</p>
       <img src="/tokenomics.svg" alt="" />
-      <p>
+      <p className="text-[#3E424A]">
         Lorem ipsum dolor sit amet consectetur. Cras aliquet tristique ornare
         vestibulum nunc dignissim vel consequat. Leo etiam nascetur bibendum
         amet enim sit eget leo amet. At metus orci augue fusce eleifend lectus
@@ -19,4 +19,3 @@ export default function Tokenomics() {
     </div>
   );
 }
-

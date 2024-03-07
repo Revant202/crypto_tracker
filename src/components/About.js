@@ -2,9 +2,9 @@ import React from "react";
 
 export default function About() {
   return (
-    <div className="flex flex-col p-4 gap-5 rounded-[6px] bg-white">
-      <p>About Bitcoin</p>
-      <p>What is Bitcoin?</p>
+    <div className="flex flex-col p-4 gap-5 rounded-[8px] mt-6 bg-white">
+      <p className="text-[24px] font-semibold">About Bitcoin</p>
+      <p className="text-[18px] font-bold">What is Bitcoin?</p>
       <p>
         Bitcoin’s price today is US$16,951.82, with a 24-hour trading volume of
         $19.14 B. BTC is +0.36% in the last 24 hours. It is currently -7.70%
@@ -12,7 +12,8 @@ export default function About() {
         all-time low of $16,394.75. BTC has a circulating supply of 19.24 M BTC
         and a max supply of 21 M BTC.
       </p>
-      <p>Lorem ipsum dolor sit amet</p>
+      <div className="border border-[#EDEEF3]" />
+      <p className="text-[18px] font-bold">Lorem ipsum dolor sit amet</p>
       <p>
         Lorem ipsum dolor sit amet consectetur. Aliquam placerat sit lobortis
         tristique pharetra. Diam id et lectus urna et tellus aliquam dictum at.
@@ -37,7 +38,38 @@ export default function About() {
         fames amet dui. Purus ultrices tincidunt volutpat in eget. Ullamcorper
         dui
       </p>
-      <p>Already Holding Bitcoin?</p>
+      <div className="border border-[#EDEEF3]" />
+      <p className="text-[24px] font-semibold">Already Holding Bitcoin?</p>
+      <div className="flex lg:flex-row flex-col gap-8">
+        <div className="bg-gradient-to-br from-[#79F1A4] to-[#0E5CAD] rounded-[7px]  flex flex-row p-6 items-center gap-6">
+          <figure className="rounded-[7px] overflow-hidden max-w-[128px] ">
+            <img src="/profits.svg" alt="" />
+          </figure>
+          <span className="flex flex-col flex-1 items-start gap-4">
+            <p className="text-[20px] text-white font-bold max-w-40">
+              Calculate your Profits
+            </p>
+            <button class="flex items-center justify-center px-4 py-1 bg-white rounded-lg shadow-md gap-2">
+              <p class="font-semibold text-gray-800">Check Now</p>
+              <img src="/arrow_right.svg" alt="" />
+            </button>
+          </span>
+        </div>
+        <div className="bg-gradient-to-br from-[#FF9865] to-[#EF3031] rounded-[7px]  flex flex-row p-6 items-center gap-6">
+          <figure className="rounded-[7px] overflow-hidden max-w-[128px] ">
+            <img src="/profits.svg" alt="" />
+          </figure>
+          <span className="flex flex-col flex-1 items-start gap-4">
+            <p className="text-[20px] text-white font-bold max-w-40">
+              Calculate your tax liability
+            </p>
+            <button class="flex items-center justify-center px-4 py-1 bg-white rounded-lg shadow-md gap-2">
+              <p class="font-semibold text-gray-800">Check Now</p>
+              <img src="/arrow_right.svg" alt="" />
+            </button>
+          </span>
+        </div>
+      </div>
       <p>
         Fermentum hendrerit imperdiet nulla viverra faucibus. Sit aliquam massa
         vel convallis duis ac. Mi adipiscing semper scelerisque porttitor
@@ -48,4 +80,3 @@ export default function About() {
     </div>
   );
 }
-
