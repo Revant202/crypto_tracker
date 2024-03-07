@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Tokenomics() {
   return (
-    <div className="flex flex-col p-4 gap-5 rounded-[8px] mt-6 bg-white ">
+    <div className="flex flex-col p-8 gap-5 rounded-[8px] mt-6 bg-white ">
       <p className="text-[24px] font-semibold">Tokenomics</p>
       <p className="text-[20px] font-semibold">Initial Distribution</p>
       <img src="/tokenomics.svg" alt="" />

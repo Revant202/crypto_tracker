@@ -54,7 +54,7 @@ export default function Navbar() {
 
           <a
             href="#"
-            className="inline-block text-sm px-4 py-3 leading-none border rounded-[8px] bg-primary text-white mt-4 lg:mt-0 hover:bg-black Z"
+            className="inline-block text-sm px-4 py-3 leading-none border rounded-[8px] bg-primary text-white font-semibold mt-4 lg:mt-0 hover:bg-black Z"
           >
             Get Started
           </a>

@@ -4,9 +4,9 @@ export default function TrendingCoinsCard({ data }) {
   const top3Coins = data?.coins.slice(0, 3);
   return (
     <div className="rounded-[8px] md:mr-5 mt-5 p-6 bg-white">
-      <p className="text-[24px] font-semibold mb-4">Trending Coins (24h)</p>
+      <p className="text-[24px] font-semibold mb-6">Trending Coins (24h)</p>
       {top3Coins && (
-        <div className="flex flex-col justify-center gap-6">
+        <div className="flex flex-col justify-center gap-4">
           {top3Coins.map((crypto, index) => (
             <div key={index} className="flex justify-between items-center">
               <div className="flex justify-center items-center gap-2">

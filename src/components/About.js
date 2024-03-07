@@ -2,7 +2,7 @@ import React from "react";
 
 export default function About() {
   return (
-    <div className="flex flex-col p-4 gap-5 rounded-[8px] mt-6 bg-white">
+    <div className="flex flex-col p-8 gap-5 rounded-[8px] mt-6 bg-white">
       <p className="text-[24px] font-semibold">About Bitcoin</p>
       <p className="text-[18px] font-bold">What is Bitcoin?</p>
       <p>

@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Team() {
   return (
-    <div className="flex flex-col p-4 gap-5 rounded-[8px] mt-6 bg-white">
+    <div className="flex flex-col p-8 gap-5 rounded-[8px] mt-6 bg-white">
       <p className="text-[24px] font-semibold">Team</p>
       <p className="text-[#3E424A]">
         Lorem ipsum dolor sit amet consectetur. Cras aliquet tristique ornare
