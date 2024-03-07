@@ -1,6 +1,6 @@
 import React from "react";
 
-function GetStartedCard() {
+export default function GetStartedCard() {
   return (
     <div className="flex flex-col text-center justify-center items-center gap-8 mx-5 px-12 py-8 rounded-[16px] bg-primary text-white ">
       <p className="text-[#F2F2F2] font-bold text-[24px] mx-10">
@@ -19,4 +19,3 @@ function GetStartedCard() {
   );
 }
 
-export default GetStartedCard;

@@ -1,6 +1,6 @@
 import React from "react";
 
-function TrendingCoinsCard({ data }) {
+export default function TrendingCoinsCard({ data }) {
   const top3Coins = data?.coins.slice(0, 3);
   return (
     <div className="rounded-[8px] mx-5 mt-5 p-6 bg-white">
@@ -10,14 +10,22 @@ function TrendingCoinsCard({ data }) {
           {top3Coins.map((crypto, index) => (
             <div key={index} className="flex justify-between items-center">
               <div className="flex justify-center items-center gap-2">
-                <img src={crypto.item.thumb} alt="" width={24} height={24} />
+                <img
+                  src={crypto.item.thumb}
+                  className="rounded-full"
+                  alt=""
+                  width={24}
+                  height={24}
+                />
                 <p className="text-[16px] font-semibold">
                   {crypto.item.name} ({crypto.item.symbol})
                 </p>
               </div>
               <span></span>
               <span>
-                {crypto.item.data.price_change_percentage_24h.btc.toFixed(2)}
+                {crypto.item.data.price_change_percentage_24h.btc
+                  .toFixed(2)
+                  .replace(/\.?0+$/, "")}
               </span>
             </div>
           ))}
@@ -26,5 +34,3 @@ function TrendingCoinsCard({ data }) {
     </div>
   );
 }
-
-export default TrendingCoinsCard;

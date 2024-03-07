@@ -5,7 +5,11 @@ import Navbar from "./components/Navbar";
 import { fetchBitcoinPrice, fetchTrendingCryptos } from "./api";
 import GetStartedCard from "./components/GetStartedCard";
 import TrendingCoinsCard from "./components/TrendingCoinsCard";
-import Slider from "./components/Slider";
+import Sentiments from "./components/Sentiments";
+import Tokenomics from "./components/Tokenomics";
+import Team from "./components/Team";
+import About from "./components/About";
+import RecommendedCoins from "./components/RecommendedCoins";
 
 function App() {
   const [bitcoinData, setBitcoinData] = useState(null);
@@ -23,29 +27,35 @@ function App() {
     fetchData();
   }, []);
   return (
-    <main className="flex min-h-screen flex-col bg-[#EAEEF4]">
+    <div className="flex h-full flex-col bg-[#EFF2F5]">
       <Navbar />
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4 mx-10">
-        <div className="h-[calc(100vh-200px)]  col-span-2 rounded-[8px]">
-          <AdvancedRealTimeChart
-            theme="light"
-            autosize={true}
-            symbol="AAPL"
-            timezone="Etc/UTC"
-            style="2"
-            locale="in"
-            enable_publishing={false}
-            hide_top_toolbar={true}
-            withdateranges={true}
-            range="ALL"
-            // save_image={false}
-            calendar={false}
-            hide_volume={true}
-            hide_side_toolbar={true}
-            allow_symbol_change={false}
-            hide_legend={true}
-          />
-        <Slider />
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4 mx-10 bg-[#EFF2F5]">
+        <div className="col-span-2">
+          <div className="h-[calc(100vh-200px)]  rounded-[8px] bg-white overflow-hidden">
+            <AdvancedRealTimeChart
+              theme="light"
+              autosize={true}
+              symbol="AAPL"
+              timezone="Etc/UTC"
+              style="2"
+              locale="in"
+              enable_publishing={false}
+              hide_top_toolbar={true}
+              withdateranges={true}
+              range="ALL"
+              // save_image={false}
+              calendar={false}
+              hide_volume={true}
+              hide_side_toolbar={true}
+              allow_symbol_change={false}
+              hide_legend={true}
+            />
+          </div>
+          <Sentiments />
+          <About />
+          <Tokenomics />
+          <Team />
+          <RecommendedCoins data={trendingCryptos} />
         </div>
         <div className="col-span-1">
           <GetStartedCard />
@@ -60,7 +70,7 @@ function App() {
           <TrendingCoinsCard data={trendingCryptos} />
         </div>
       </div>
-    </main>
+    </div>
   );
 }
 
