@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Performance() {
+export default function Performance({ cryptoData}) {
   return (
     <div className="flex flex-col md:p-8 p-4 gap-5 rounded-[8px] mt-6 bg-white">
       <p className="text-[24px] font-semibold">Performance</p>
@@ -14,7 +14,9 @@ export default function Performance() {
       <div className="flex flex-col md:flex-row md:justify-between md:gap-24">
         <div className="flex flex-1 flex-col">
           <div className="flex justify-between py-4 gap-2 border-b-2 border-[#EDEEF3]">
-            <p className="text-[#768396]">Bitcoin Price</p>
+            <p className="text-[#768396]">
+              {cryptoData?.name} Price
+            </p>
             <p className="text-[#111827] font-semibold">$16,815.46</p>
           </div>
           <div className="flex justify-between py-4 gap-2 border-b-2 border-[#EDEEF3]">

@@ -1,17 +1,11 @@
 import React from "react";
 
-export default function About() {
+export default function About({ cryptoData }) {
   return (
     <div className="flex flex-col md:p-8 p-4 gap-5 rounded-[8px] mt-6 bg-white">
-      <p className="text-[24px] font-semibold">About Bitcoin</p>
-      <p className="text-[18px] font-bold">What is Bitcoin?</p>
-      <p>
-        Bitcoin’s price today is US$16,951.82, with a 24-hour trading volume of
-        $19.14 B. BTC is +0.36% in the last 24 hours. It is currently -7.70%
-        from its 7-day all-time high of $18,366.66, and 3.40% from its 7-day
-        all-time low of $16,394.75. BTC has a circulating supply of 19.24 M BTC
-        and a max supply of 21 M BTC.
-      </p>
+      <p className="text-[24px] font-semibold">About {cryptoData?.name}</p>
+      <p className="text-[18px] font-bold">What is {cryptoData?.name}?</p>
+      <p>{cryptoData?.description.en}</p>
       <div className="border border-[#EDEEF3]" />
       <p className="text-[18px] font-bold">Lorem ipsum dolor sit amet</p>
       <p>
@@ -39,7 +33,9 @@ export default function About() {
         dui
       </p>
       <div className="border border-[#EDEEF3]" />
-      <p className="text-[24px] font-semibold">Already Holding Bitcoin?</p>
+      <p className="text-[24px] font-semibold">
+        Already Holding {cryptoData?.name}?
+      </p>
       <div className="flex lg:flex-row flex-col gap-8">
         <div className="bg-gradient-to-br from-[#79F1A4] to-[#0E5CAD] rounded-[7px]  flex flex-row md:p-6 p-3 items-center gap-6">
           <figure className="rounded-[7px] overflow-hidden max-w-[128px] ">
