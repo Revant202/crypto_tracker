@@ -23,7 +23,7 @@ export default function RecommendedCoins({ data }) {
   };
 
   return (
-    <div className="flex flex-col p-16 gap-5 bg-white mt-8">
+    <div className="flex flex-col md:p-16 p-4 gap-5 bg-white mt-8">
       <p className="text-[24px] font-semibold">You May Also Like</p>
       {data && (
         <Carousel
@@ -89,7 +89,7 @@ export default function RecommendedCoins({ data }) {
           {data?.coins?.map((crypto, index) => (
             <div
               key={index}
-              className="flex flex-col justify-center rounded-[10px] border-[1px] border-[#E3E3E3] p-4 mr-2 overflow-hidden"
+              className="flex flex-col justify-center rounded-[10px] border-[1px] border-[#E3E3E3] p-4 mr-2 mb-2 overflow-hidden"
             >
               <div className="flex gap-2">
                 <img

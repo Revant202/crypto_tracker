@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Team() {
   return (
-    <div className="flex flex-col p-8 gap-5 rounded-[8px] mt-6 bg-white">
+    <div className="flex flex-col md:p-8 p-4 gap-5 rounded-[8px] mt-6 bg-white">
       <p className="text-[24px] font-semibold">Team</p>
       <p className="text-[#3E424A]">
         Lorem ipsum dolor sit amet consectetur. Cras aliquet tristique ornare
@@ -10,7 +10,7 @@ export default function Team() {
         amet enim sit eget leo amet.
       </p>
       {[...Array(3)].map((_, index) => (
-        <div className="bg-[#E8F4FD] rounded-[12px]  flex flex-row  px-8 py-4 items-center justify-center">
+        <div className="bg-[#E8F4FD] rounded-[12px]  flex flex-col gap-2 md md:flex-row  px-8 py-4 items-center justify-center">
           <span className="flex flex-col  items-center mr-5">
             <figure className="m-2 rounded-[7px] overflow-hidden flex-1 w-[96px] ">
               <img
@@ -22,7 +22,7 @@ export default function Team() {
               />
             </figure>
             <p className="text-[15px] font-semibold text-center">John Smith</p>
-            <p className="text-[12px] text-gray-600 text-center">
+            <p className="text-[14px] text-gray-600 text-center">
               Designation here
             </p>
           </span>

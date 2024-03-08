@@ -2,7 +2,7 @@ import React from "react";
 
 export default function About() {
   return (
-    <div className="flex flex-col p-8 gap-5 rounded-[8px] mt-6 bg-white">
+    <div className="flex flex-col md:p-8 p-4 gap-5 rounded-[8px] mt-6 bg-white">
       <p className="text-[24px] font-semibold">About Bitcoin</p>
       <p className="text-[18px] font-bold">What is Bitcoin?</p>
       <p>
@@ -41,7 +41,7 @@ export default function About() {
       <div className="border border-[#EDEEF3]" />
       <p className="text-[24px] font-semibold">Already Holding Bitcoin?</p>
       <div className="flex lg:flex-row flex-col gap-8">
-        <div className="bg-gradient-to-br from-[#79F1A4] to-[#0E5CAD] rounded-[7px]  flex flex-row p-6 items-center gap-6">
+        <div className="bg-gradient-to-br from-[#79F1A4] to-[#0E5CAD] rounded-[7px]  flex flex-row md:p-6 p-3 items-center gap-6">
           <figure className="rounded-[7px] overflow-hidden max-w-[128px] ">
             <img src="/profits.svg" alt="" />
           </figure>
@@ -50,12 +50,12 @@ export default function About() {
               Calculate your Profits
             </p>
             <button class="flex items-center justify-center px-4 py-1 bg-white rounded-lg shadow-md gap-2">
-              <p class="font-semibold text-gray-800">Check Now</p>
+              <p class="font-bold text-gray-800 text-[12px]">Check Now</p>
               <img src="/arrow_right.svg" alt="" />
             </button>
           </span>
         </div>
-        <div className="bg-gradient-to-br from-[#FF9865] to-[#EF3031] rounded-[7px]  flex flex-row p-6 items-center gap-6">
+        <div className="bg-gradient-to-br from-[#FF9865] to-[#EF3031] rounded-[7px]  flex flex-row md:p-6 p-3 items-center gap-6">
           <figure className="rounded-[7px] overflow-hidden max-w-[128px] ">
             <img src="/profits.svg" alt="" />
           </figure>
@@ -64,7 +64,7 @@ export default function About() {
               Calculate your tax liability
             </p>
             <button class="flex items-center justify-center px-4 py-1 bg-white rounded-lg shadow-md gap-2">
-              <p class="font-semibold text-gray-800">Check Now</p>
+              <p class="font-bold text-gray-800 text-[12px]">Check Now</p>
               <img src="/arrow_right.svg" alt="" />
             </button>
           </span>

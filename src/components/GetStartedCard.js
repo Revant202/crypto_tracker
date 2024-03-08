@@ -2,8 +2,8 @@ import React from "react";
 
 export default function GetStartedCard() {
   return (
-    <div className="flex flex-col text-center justify-center items-center gap-8 px-12 py-8 rounded-[8px] md:mr-5 md:mt-0 mt-4 bg-primary text-white ">
-      <p className="text-[#F2F2F2] font-bold text-[24px] mx-10">
+    <div className="flex flex-col text-center justify-center items-center gap-8 md:px-12 px-4 py-8 rounded-[8px] md:mr-5 md:mt-0 mt-4 bg-primary text-white ">
+      <p className="text-[#F2F2F2] font-bold text-[24px] md:mx-10">
         Get Started with KoinX for FREE
       </p>
       <p className="text-[#F2F2F2] text-[14px]">
