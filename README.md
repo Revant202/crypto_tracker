@@ -8,11 +8,8 @@ Track, visualize and stay updated with latest crypto trends ! [Click here](https
 ## Tech Used
 
 1. React JS
-
 2. Tailwind CSS
-
 3. react-ts-tradingview-widgets (for rendering Trading Graph)
-
 4. d3 (for rendering doughnut chart)
 
 
