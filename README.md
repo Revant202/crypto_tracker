@@ -1,6 +1,10 @@
 # Crypto Tracker
 Track, visualize and stay updated with latest crypto trends ! [Click here](https://crypto-tracker-rho-two.vercel.app/)
 
+# Demo
+https://github.com/Revant202/crypto_tracker/assets/76607683/cffb4288-ae08-4e55-86e3-6cee6ddc82a8
+
+
 ## How to use?
 1. The default '/' route redirects you to '/bitcoin' (I have set it as the default crypto page)
 2. To checkout other cryptos, just change the URL to '/[cryptoId]'. For example, try '/ethereum', '/dogecoin' etc.
