@@ -15,7 +15,7 @@ export default function Chart({ data }) {
             <p className="text-[28px] font-semibold">${data.bitcoin.usd}</p>
             <p className="text-[16px]">₹{data.bitcoin.inr}</p>
           </div>
-          <div className="flex gap-2  items-center">
+          <div className="flex gap-2  items-center mt-2">
             <div
               className={`py-[4px] px-[6px] rounded-[4px] ${
                 data.bitcoin.inr_24h_change > 0

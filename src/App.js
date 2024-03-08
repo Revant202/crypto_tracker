@@ -13,6 +13,7 @@ import RecommendedCoins from "./components/RecommendedCoins";
 import Performance from "./components/Performance";
 import Chart from "./components/Chart";
 import NavigationTabs from "./components/NavigationTabs";
+import DoughnutChart from "./components/DoughnutChart";
 
 function App() {
   const [bitcoinData, setBitcoinData] = useState(null);
