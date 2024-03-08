@@ -39,7 +39,7 @@ export default function Chart({ priceData, cryptoData }) {
         <AdvancedRealTimeChart
           theme="light"
           autosize={true}
-          symbol="AAPL"
+          symbol={cryptoData?.symbol.toUpperCase() + "USD"}
           timezone="Etc/UTC"
           style="2"
           locale="in"

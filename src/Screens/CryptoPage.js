@@ -16,7 +16,7 @@ import NavigationTabs from "../components/NavigationTabs";
 
 
 export default function CryptoPage() {
- const { cryptoId } = useParams(); // ["bitcoin", "ethereum", "ripple"
+ const { cryptoId } = useParams(); // "bitcoin", "ethereum", "ripple"
   const [cryptoPrice, setCryptoPrice] = useState(null);
   const [cryptoData, setCryptoData] = useState(null);
   const [trendingCryptos, setTrendingCryptos] = useState(null);
